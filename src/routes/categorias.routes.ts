@@ -1,11 +1,8 @@
 import { Router } from "express";
+import { createCategoriaController } from "../useCases/createCategoria";
 
 const categoriasRouter = Router();
 
-categoriasRouter.get("/categorias", (_req, res) => {
-    res.status(200).send({ message: "Teste" });
-});
+categoriasRouter.post("/categorias", (req, res) => createCategoriaController.handle(req, res));
 
-categoriasRouter.post("/categorias", (req, res) => {
-    res.status(200).send({ message: "Teste" });
-});
+export default categoriasRouter;
