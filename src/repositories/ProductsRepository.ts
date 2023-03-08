@@ -1,7 +1,7 @@
 import prisma from "../database/db";
 import { Categoria } from "../model/Categoria";
 
-export class ProductsRepository {
+export class CategoriaRepository {
 
     async create({ id, name }: Categoria): Promise<void> {
         await prisma.categorias.create({
