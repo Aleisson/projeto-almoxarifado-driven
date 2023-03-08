@@ -6,7 +6,7 @@ export class CreateCategoriaController {
 
     handle(req: Request, res: Response): Response {
         const { name } = req.body;
-
+        
         this.createClientCreate.execute({ name });
 
         return res.sendStatus(201);

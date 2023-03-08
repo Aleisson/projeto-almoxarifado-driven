@@ -5,4 +5,6 @@ const categoriasRouter = Router();
 
 categoriasRouter.post("/categorias", (req, res) => createCategoriaController.handle(req, res));
 
+
+
 export default categoriasRouter;
